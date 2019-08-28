@@ -1,0 +1,43 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Cali_QTM_VIVE : MonoBehaviour {
+    public GameObject _viveTracker;
+    public GameObject _qtmRBody;
+    public GameObject _viveSystem;
+    public Vector3 _realWorldOffset_viveMinusQTM;
+    //public GameObject _wldOrigin;
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        if (Input.GetKeyDown("space"))
+            Adjust();
+        //Adjust();
+	}
+
+    private void OnEnable()
+    {
+        //StartCoroutine(Sync());
+    }
+
+    private void OnDisable()
+    {
+        //StopCoroutine(Sync());
+    }
+
+
+    public void Adjust ()
+    {
+        Vector3 viveTrackerPos = _viveTracker.transform.position;
+        Vector3 qtmRBodyPos = _qtmRBody.transform.position;
+        Vector3 viveTrackerIdealPos = qtmRBodyPos +
+            _qtmRBody.transform.rotation * _realWorldOffset_viveMinusQTM;
+        Vector3 _desiredAdjust = viveTrackerIdealPos - viveTrackerPos;
+        _viveSystem.transform.position += _desiredAdjust;
+    }
+
