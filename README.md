@@ -16,8 +16,9 @@ To bring the two systems together, the general idea is to have a physical prop c
 
 2) Make sure you have this physical prop by your hand (shown in the picture below). This prop combines a QTM rigid body and a VIVE tracker together, and it’s specifically built to synchronize between QTM and VIVE. 
 
+![image 1](photo1.jpg)
 
-If you are not directly using the “RunTest” project in QTM, you need to define the rigid body on this physical prop in the QTM software. Make sure you define it in the way shown below (notice how QTM uses a right-handed system). Give the rigid body a name and remember it (you’ll need to put it in Unity later)
+3) If you are not directly using the “RunTest” project in QTM, you need to define the rigid body on this physical prop in the QTM software. Make sure you define it in the way shown below (notice how QTM uses a right-handed system). Give the rigid body a name and remember it (you’ll need to put it in Unity later).
 
 
 Initialize a blank Unity project, download the QTM Unity package from the repo of Qualisys https://github.com/qualisys/Qualisys-Unity-SDK
