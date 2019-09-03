@@ -36,18 +36,22 @@ To bring the two systems together, the general idea is to have a physical prop c
 
 *Note: QTM uses a right-handed system while Unity is left-handed. When using this Unity package from QTM, my experience is that it’s helpful to think that the QTM world coordinate system and the Unity world share the same x axis, as shown below.*
 
-(8) Now test if QTM works with Unity. On the top menu of Unity, press “Window” -> “Qualisys” -> RTClient, which should bring up a QTM panel. Press “Play” in Unity Editor to start the application, and then click “connect” on the QTM panel. The computer that runs this application needs to be in the same LAN environment with the QTM server computer to make this work. If it works correctly, you should be able to move the physical prop around in reality while seeing the 3D virtual object (with the script “RTObject.cs” attached) follow your movement. 
-Note: you’ll need to click “connect” every time you run the application when using this Unity package provided by Qualisys. 
+![image5](picture5.png)
 
-2.2 Connect VIVE with Unity
+8) Now test if QTM works with Unity. On the top menu of Unity, press “Window” -> “Qualisys” -> RTClient, which should bring up a QTM panel. Press “Play” in Unity Editor to start the application, and then click “connect” on the QTM panel. The computer that runs this application needs to be in the same LAN environment with the QTM server computer to make this work. If it works correctly, you should be able to move the physical prop around in reality while seeing the 3D virtual object (with the script “RTObject.cs” attached) follow your movement. 
+*Note: you’ll need to click “connect” every time you run the application when using this Unity package provided by Qualisys.*
 
-(1) Next we need to connect this Unity project with the VIVE system. Just do the regular things that would make VIVE work with Unity. What I was using was the “VIVE Input Utility” from Unity Asset Store. https://assetstore.unity.com/packages/tools/integration/vive-input-utility-64219. It has a prefab that directly includes the VIVE trackers. Download this package and put a “ViveCameraRig” in the Unity scene and make sure its position is at world origin (0,0,0). Also, don’t forget to enable “Virtual Reality Supported” in the “XR setting” of Unity. 
+### 2.2 Connect VIVE with Unity
 
-(2) Test if VIVE works. Press “Play” and see if the HMD and tracking works. 
+1) Next we need to connect this Unity project with the VIVE system. Just do the regular things that would make VIVE work with Unity. What I was using was the “VIVE Input Utility” from Unity Asset Store. https://assetstore.unity.com/packages/tools/integration/vive-input-utility-64219. It has a prefab that directly includes the VIVE trackers. Download this package and put a “ViveCameraRig” in the Unity scene and make sure its position is at world origin (0,0,0). Also, don’t forget to enable “Virtual Reality Supported” in the “XR setting” of Unity. 
 
-(3) More specific to our setup is that we need to make sure the VIVE tracker on the physical prop is properly tracked and displayed. Depends on how you calibrated the VIVE system, you may need to rotate the “ViveCameraRig” to align it with the Unity world and with the Qualisys world. Test this by moving the physical prop to see if the tracker and the 3D item representing the QTM rigid body move in the same direction in the Unity scene (note that they are not likely to be co-located since it’s likely that the Qualisys and VIVE systems don’t share the same world origin based on the separate calibration processes). If not, you’ll need to rotate ViveCameraRig accordingly. In my testing in Perform, I had to rotate the ViveCameraRig by -90 degrees, as shown below. 
+2) Test if VIVE works. Press “Play” and see if the HMD and tracking works. 
 
-2.3 Synchronize QTM with VIVE
+3) More specific to our setup is that we need to make sure the VIVE tracker on the physical prop is properly tracked and displayed. Depends on how you calibrated the VIVE system, you may need to rotate the “ViveCameraRig” to align it with the Unity world and with the Qualisys world. **Test this by moving the physical prop to see if the tracker and the 3D item representing the QTM rigid body move in the same direction in the Unity scene (note that they are not likely to be co-located since it’s likely that the Qualisys and VIVE systems don’t share the same world origin based on the separate calibration processes).** If not, you’ll need to rotate ViveCameraRig accordingly. In my testing in Perform, I had to rotate the ViveCameraRig by -90 degrees, as shown below. 
+
+![image6](picture6.png)
+
+### 2.3 Synchronize QTM with VIVE
 
 Create an empty GameObject in the Unity scene. Attach the script “Cali_QTM_VIVE.cs” to it. You should be able to find the script in a folder called “code” in the directory of this tutorial. The rest of this sub-section is illustrated in the picture below.
 
