@@ -21,7 +21,7 @@ To bring the two systems together, the general idea is to have a physical prop c
 3) If you are not directly using the “RunTest” project in QTM, you need to define the rigid body on this physical prop in the QTM software. Make sure you define it in the way shown below (notice how QTM uses a right-handed system). Give the rigid body a name and remember it (you’ll need to put it in Unity later).
 
 ![image2](picture2.png)
-![image2](picture3.png)
+![image3](picture3.png)
 
 
 4) Initialize a blank Unity project, download the QTM Unity package from the repo of Qualisys https://github.com/qualisys/Qualisys-Unity-SDK
@@ -32,6 +32,7 @@ To bring the two systems together, the general idea is to have a physical prop c
 
 7) Drag the “RTObject.cs” script (in Qualisys/QTM-Unity-Realtime-Streaming/Streaming) onto this gameobject. Put the rigid body’s name you defined earlier in QTM in the field of “Object Name”. This would make this Unity project receive real-time motion tracking data from QTM and use that to move this 3D virtual object in Unity. Also, give the “Rotation Offset” field a -90 at the Y field and a 90 at the Z field, as shown in the picture below (in this picture the 3D virtual object representing the QTM rigid body is a “slab” called “QTMOrig”). 
 
+![image4](picture4.png)
 
 *Note: QTM uses a right-handed system while Unity is left-handed. When using this Unity package from QTM, my experience is that it’s helpful to think that the QTM world coordinate system and the Unity world share the same x axis, as shown below.*
 
