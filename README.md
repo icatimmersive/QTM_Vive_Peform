@@ -20,6 +20,9 @@ To bring the two systems together, the general idea is to have a physical prop c
 
 3) If you are not directly using the “RunTest” project in QTM, you need to define the rigid body on this physical prop in the QTM software. Make sure you define it in the way shown below (notice how QTM uses a right-handed system). Give the rigid body a name and remember it (you’ll need to put it in Unity later).
 
+![image2](picture2.png)
+![image2](picture3.png)
+
 
 Initialize a blank Unity project, download the QTM Unity package from the repo of Qualisys https://github.com/qualisys/Qualisys-Unity-SDK
 Import that Unity package into your project. This should create a folder called “Qualisys”.
