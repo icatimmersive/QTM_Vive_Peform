@@ -24,12 +24,16 @@ To bring the two systems together, the general idea is to have a physical prop c
 ![image2](picture3.png)
 
 
-Initialize a blank Unity project, download the QTM Unity package from the repo of Qualisys https://github.com/qualisys/Qualisys-Unity-SDK
-Import that Unity package into your project. This should create a folder called “Qualisys”.
-Create a small 3D object (e.g. a cube) in the Unity scene, which would represent the QTM rigid body on the physical prop. 
-Drag the “RTObject.cs” script (in Qualisys/QTM-Unity-Realtime-Streaming/Streaming) onto this gameobject. Put the rigid body’s name you defined earlier in QTM in the field of “Object Name”. This would make this Unity project receive real-time motion tracking data from QTM and use that to move this 3D virtual object in Unity. Also, give the “Rotation Offset” field a -90 at the Y field and a 90 at the Z field, as shown in the picture below (in this picture the 3D virtual object representing the QTM rigid body is a “slab” called “QTMOrig”). 
+4) Initialize a blank Unity project, download the QTM Unity package from the repo of Qualisys https://github.com/qualisys/Qualisys-Unity-SDK
 
-Note: QTM uses a right-handed system while Unity is left-handed. When using this Unity package from QTM, my experience is that it’s helpful to think that the QTM world coordinate system and the Unity world share the same x axis, as shown below. 
+5) Import that Unity package into your project. This should create a folder called “Qualisys”.
+
+6) Create a small 3D object (e.g. a cube) in the Unity scene, which would represent the QTM rigid body on the physical prop. 
+
+7) Drag the “RTObject.cs” script (in Qualisys/QTM-Unity-Realtime-Streaming/Streaming) onto this gameobject. Put the rigid body’s name you defined earlier in QTM in the field of “Object Name”. This would make this Unity project receive real-time motion tracking data from QTM and use that to move this 3D virtual object in Unity. Also, give the “Rotation Offset” field a -90 at the Y field and a 90 at the Z field, as shown in the picture below (in this picture the 3D virtual object representing the QTM rigid body is a “slab” called “QTMOrig”). 
+
+
+*Note: QTM uses a right-handed system while Unity is left-handed. When using this Unity package from QTM, my experience is that it’s helpful to think that the QTM world coordinate system and the Unity world share the same x axis, as shown below.*
 
 (8) Now test if QTM works with Unity. On the top menu of Unity, press “Window” -> “Qualisys” -> RTClient, which should bring up a QTM panel. Press “Play” in Unity Editor to start the application, and then click “connect” on the QTM panel. The computer that runs this application needs to be in the same LAN environment with the QTM server computer to make this work. If it works correctly, you should be able to move the physical prop around in reality while seeing the 3D virtual object (with the script “RTObject.cs” attached) follow your movement. 
 Note: you’ll need to click “connect” every time you run the application when using this Unity package provided by Qualisys. 
