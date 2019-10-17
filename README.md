@@ -243,7 +243,7 @@ This document was written with the following software versions and may not be ap
     * In QTM, open a new measurement
     * If the cameras get stuck syncing again, proceed to step 2
 
-### 2.1 Connect QTM with Unity
+## 2.1 Connect QTM with Unity
 
 1) Calibrate the Qualisys system as usual, remember to make the Y axis pointing up in the world coordinate system. If you are not sure, there is a QTM project called “RunTest” on the computer that’s connected to the QTM system in Perform studio. Directly use that project or follow the settings in that project.
 
