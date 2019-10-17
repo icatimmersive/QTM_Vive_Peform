@@ -7,9 +7,7 @@ Run Yu   runyu@vt.edu
 ## Introduction
   This is a tutorial about how to combine the Qualisys motion tracking system with the VIVE VR system. The goal is to let you use the VIVE headset, controllers and trackers just like usual, while also having extra items tracked by the Qualisys system co-exist in the same virtual environment (VE). In this way, you take advantage of the high-quality display of the VIVE system without losing the flexibility of tracking custom-made objects (e.g. you can even track full human bodies with the Qualisys system). We think this kind of setup would be ideal for the CUBE. 
   To bring the two systems together, the general idea is to have a physical prop co-tracked by the two systems simultaneously, and we use this prop as a reference to bring the two separate coordinate systems to the same virtual environment in Unity. Section 2 is a quick start guide, which is what I could build and test in the Perform studio during summer 2019. Using this guide, you can quickly create a scenario that you use the VIVE headset to walk in a VE while holding a rigid body tracked by the Qualisys system. The biggest problem of this guide is the lack of accuracy. Bringing the two systems together is a calibration process, and all the steps in Section 2 is based on me eyeballing everything. The result of this inaccuracy is that you may see the rigid body tracked by Qualisys being offset by a certain distance (or angle) in the VE compared to reality. Hence, I’ve also written a Section 3 to explain the ideas behind Section 2 and how one could potentially follow up to improve upon the current procedure. 
-
-# 1.1 Qualisys Track Manager - How To - Create a New Project
-
+  
 ## Description
 
 This document describes how to create a new project in Qualisys Track Manager (QTM) in the Cube, in preparation for motion capture.
@@ -24,6 +22,8 @@ Text in red indicated instructions are incomplete and need to be written.
 
 This document was written with the following software versions and may not be applicable for later versions:
 ●	Qualisys 2.12
+
+# 1.1 Qualisys Track Manager - How To - Create a New Project
 
 ## Instructions
 ### 1. Log in to either Nermal, the PC desktop computer in the Cube or ImmersiveMediaPerform in Perform (see password document)
